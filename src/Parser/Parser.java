@@ -9,6 +9,8 @@ public class Parser {
 
     public static void main(String[] args) throws IOException {
 
+
+
         ParseTree test = new ParseTree();
         String data = "";
 

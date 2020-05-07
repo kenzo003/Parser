@@ -1,1 +1,11 @@
-shape={type="tetrahedron"vertices={point={x="1”y=“0”z=“0”}point={x=“0”y=“1”z=“0”}point={x=“0”y=“0”z=“1”}point={x=“1”y=“1”z=“1”}}color={r=“0xFF”g=“0x00”b=“0x80”alpha=“0x80”}}
+shape={
+type="123tetrahedron"
+vertices=
+{
+point={x="1”y=“0”z=“0”}
+point={x=“0”y=“1”z=“0”}
+point={x=“0”y=“0”z=“1”}
+point={x=“1”y=“1” point2= {x2="11" y2="22"}}
+}
+color={r=“0xFF”g=“0x00”b=“0x80”alpha=“0x80”}
+}

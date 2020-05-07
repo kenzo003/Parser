@@ -17,6 +17,7 @@ public class ParseTree {
     private Node root = null; //корень
     private Node current = null; //текущий узел
     private int id_current = 0; //id_текущего элемента
+    
 
     //узел дерева
     private class Node{
@@ -128,19 +129,23 @@ public class ParseTree {
     }
 
     //получение высоты дерева
-    private int getTreeHeight(String data){
-        //char []symbol =  data.toCharArray();
+    private static int getTreeHeight(String data){
+//char []symbol = data.toCharArray();
         String level = " ";
         int treeHeight = 0;
+        int currentHeight = 0;
 
         for (int i = 0; i < data.length(); i++){
 
-            if ((data.charAt(i) == '{') && (level.charAt(level.length()-1) != '}')){
+            if (data.charAt(i) == '{'){
                 level += "{";
-                treeHeight++;
+                currentHeight++;
+                if(currentHeight >= treeHeight)
+                    treeHeight = currentHeight;
             }
             else if(data.charAt(i) == '}'){
                 level+="}";
+                currentHeight--;
             }
         }
         return treeHeight;
