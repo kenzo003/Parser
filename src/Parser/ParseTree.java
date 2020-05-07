@@ -128,6 +128,7 @@ public class ParseTree {
         return result;
     }
 
+
     //получение высоты дерева
     private static int getTreeHeight(String data){
 //char []symbol = data.toCharArray();
