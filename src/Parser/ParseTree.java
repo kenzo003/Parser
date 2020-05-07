@@ -131,20 +131,18 @@ public class ParseTree {
     //получение высоты дерева
     private static int getTreeHeight(String data){
 //char []symbol = data.toCharArray();
-        String level = " ";
+
         int treeHeight = 0;
         int currentHeight = 0;
 
         for (int i = 0; i < data.length(); i++){
 
             if (data.charAt(i) == '{'){
-                level += "{";
                 currentHeight++;
                 if(currentHeight >= treeHeight)
                     treeHeight = currentHeight;
             }
             else if(data.charAt(i) == '}'){
-                level+="}";
                 currentHeight--;
             }
         }
